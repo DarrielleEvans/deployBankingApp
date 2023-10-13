@@ -9,9 +9,9 @@ In this deployment, I will deploy my application on an EC2 instance using Terraf
 ## Steps
 
 ### Step 1
-* Upload code files to Github
+Upload code files to Github
 ### Step 2
-* Create VPC with the following resources
+Create VPC with the following resources
   * 2 availablility zones
   * 2 public subnets
   * 2 EC2's
