@@ -28,7 +28,7 @@ junit 'test-reports/results.xml'
 stage ('Deploy') {
 steps {
 sh '''#!/bin/bash
-echo "command to run the setup.sh"
+ssh ubuntu@ 'wget https://raw.githubusercontent.com/DarrielleEvans/deployBankingApp/main/setup.sh && chmod 700 setup.sh && ./setup.sh'
 '''
 }
 }
