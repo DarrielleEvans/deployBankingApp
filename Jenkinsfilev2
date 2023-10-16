@@ -4,14 +4,14 @@ pipeline {
     stage ('Clean') {
       steps {
         sh '''#!/bin/bash
-        echo "command to run the pkill.sh"
+        ssh ubuntu@ 'wget https://raw.githubusercontent.com/DarrielleEvans/deployBankingApp/main/pkill.sh && chmod 700 setup.sh && ./setup.sh'
         '''
      }
    }
  stage ('Deploy') {
   steps {
      sh '''#!/bin/bash
-     echo "command to run the setup2.sh"
+     ssh ubuntu@ 'wget https://raw.githubusercontent.com/belindadunu/Deployment_5/main/setup2.sh && chmod 700 setup.sh && ./setup.sh'
     '''
       }
     }
