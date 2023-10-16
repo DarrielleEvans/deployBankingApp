@@ -5,6 +5,7 @@
 In this deployment, I will deploy my application on an EC2 instance using Terraform 
 
 ## Issues
+When configuring the the Terraform file, I tried to make changes to the cidr block ip ranges. Due to the vpc's dependencies, I could not apply the changes. I had to delete the dependencies first, then rerun terraform plan and terraform apply.
 
 ## Steps
 
@@ -26,7 +27,7 @@ Create Jenkins password and log in as a jenkins user
 ### Step 4
 Run Jenkins multibranch build
   * change path to Jenkinsfile1 script
-  * run Jenkinsfile2 script
+  * change path to Jenkinsfile2 script
 
 ## System Diagram
 ![Deployment5 drawio](https://github.com/DarrielleEvans/deployBankingApp/assets/89504317/5d9747dd-32fd-435e-ae67-d2a0d3fa6d65)
@@ -34,3 +35,8 @@ Run Jenkins multibranch build
 
 ## Optimization
 This application can be optimized by loading the data files in a private subnet to enhance security.
+
+### Notes
+* I reran Jenkinsfile2 by changing the path in the Jenkins build.
+* This application is used in house and will be most secure in two private subnets. The application does not need to be used by the banks customers so it does not need to communicate with the internet. 
+
