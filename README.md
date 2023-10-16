@@ -22,8 +22,15 @@ Create a Terraform configuration file with the following aws resources
 
 ### Step 3
 Create Jenkins password and log in as a jenkins user
-
+  * copy public key on application server and test ssh connection
+### Step 4
+Run Jenkins multibranch build
+  * change path to Jenkinsfile1 script
+  * run Jenkinsfile2 script
 
 ## System Diagram
+![Deployment5 drawio](https://github.com/DarrielleEvans/deployBankingApp/assets/89504317/5d9747dd-32fd-435e-ae67-d2a0d3fa6d65)
+
 
 ## Optimization
+This application can be optimized by loading the data files in a private subnet to enhance security.
